@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Database</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        hr {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        /* Styling for professor section */
+        .professor-section {
+            background-color: #e6f7ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        /* Styling for student section */
+        .student-section {
+            background-color: #eafbea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        /* Style for form labels and inputs */
+        label,
+        input[type="text"],
+        input[type="submit"] {
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        /* Style for the strong elements in professor and student sections */
+        .professor-section strong,
+        .student-section strong {
+            font-size: 20px; /* Increase font size */
+        }
+    </style>
+</head>
+<body>
+    <h1>University Database</h1>
+    <hr>
+
+    <!-- Professor Section -->
+    <div class="professor-section">
+        <p><strong>For Professors:</strong></p>
+        <!-- Professor forms -->
+        <form method="POST" action="p_ssn.php">
+            <label>Please enter your social security number to list the titles, classrooms, meeting days, and time of his/her classes.</label>
+            <u>Social Security Number</u><input type="text" name="SSN">
+            <input type="submit" value="Submit">
+        </form>
+
+        <form method="POST" action="p_cnum_snum.php">
+            <label>Given a course number and a section number, list how many students get each distinct grade.</label>
+            <u>Course Number</u><input type="text" name="CNUM">
+            <u>Section Number</u> <input type="text" name="SNUM">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Student Section -->
+    <div class="student-section">
+        <p><strong>For Students:</strong></p>
+        <!-- Student forms -->
+        <form method="POST" action="s_cnum.php">
+            <label>Given a course number list the sections of the course, including the classrooms, the meeting days and time, and the number of students enrolled in each section.</label>
+            <u>Course Number</u><input type="text" name="CNUM">
+            <input type="submit" value="Submit">
+        </form>
+
+        <form method="POST" action="s_cwid.php">
+            <label>Given the campus-wide ID of a student, list all courses the student took and the grades.</label>
+            <u>Campus Wide ID</u><input type="text" name="CWID">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Additional content or sections can be added here -->
+
+</body>
+</html>
