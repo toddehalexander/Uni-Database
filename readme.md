@@ -1,3 +1,6 @@
+<img src="Screenshots/Database1.jpg" width="200" alt="Database 1" style="margin-right: 10px;">
+
+
 # Project Descriptions:
 ## You are asked to design a database for a university that satisfies the following requirements:
 1. The database keeps information of each professor, including the social security number, name, address, telephone number, sex, title, salary, and college degrees. The address
